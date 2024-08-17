@@ -22,7 +22,7 @@ let query = new QueryClient()
 
 
 let routes=createBrowserRouter([
-{path:'',element:<Layout/>,children:[
+{path:'ecommerce',element:<Layout/>,children:[
 {index:true,element:<ProtectedRoute><Products/></ProtectedRoute>},
 {path:'login',element:<Login/>},
 {path:'Register',element:<Register/>},
