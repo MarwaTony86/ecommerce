@@ -10,7 +10,7 @@ let {cartId}=useParams()
   function handleRegister(formsData){
     console.log(formsData);
     
-  axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${id}`,
+  axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}`,
     {'shippingAddress':formsData},
    {
 headers:{
@@ -23,12 +23,12 @@ params:{
 )
   .then((response)=>{
  console.log('checkout',response)
- location.href=response.data.session.url  
+ location.href=response.data.session.url
   })
   .catch((error)=>{
 
   })
-  
+   
   }
   
   
