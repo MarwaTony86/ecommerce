@@ -24,7 +24,7 @@ let query = new QueryClient()
 
 let routes=createBrowserRouter([
 {path:'',element:<Layout/>,children:[
-{index:true,element:<Products/>},
+{index:true,element:<ProtectedRoute><Products/></ProtectedRoute>},
 {path:'login',element:<Login/>},
 {path:'Register',element:<Register/>},
 {path:'brands',element:<ProtectedRoute><Brands/></ProtectedRoute>},
