@@ -17,13 +17,14 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import Checkout from './component/checkout/checkout';
 import Allorders from './component/allorders/allorders';
 import { Offline, Online } from 'react-detect-offline';
+import Wishlist from './component/wishlist/wishlist';
 
 let query = new QueryClient()
 
 
 let routes=createBrowserRouter([
 {path:'',element:<Layout/>,children:[
-{index:true,element:<ProtectedRoute><Products/></ProtectedRoute>},
+{index:true,element:<ProtectedRoute><Login/></ProtectedRoute>},
 {path:'login',element:<Login/>},
 {path:'Register',element:<Register/>},
 {path:'brands',element:<ProtectedRoute><Brands/></ProtectedRoute>},
@@ -31,6 +32,7 @@ let routes=createBrowserRouter([
 {path:'cart',element:<ProtectedRoute><Carts/></ProtectedRoute>},
 {path:'allorders',element:<ProtectedRoute><Allorders/></ProtectedRoute>},
 {path:'checkout/:cartId',element:<ProtectedRoute><Checkout/></ProtectedRoute>},
+{path:'wishlist',element:<ProtectedRoute><Wishlist/></ProtectedRoute>},
 {path:'*',element:<Notfound/>},
 ]}
 ])
