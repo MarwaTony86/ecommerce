@@ -17,7 +17,7 @@ headers:{
   token:localStorage.getItem('userToken')
 },
 params:{
-  url:'http://localhost:5173/'
+  url:'http://localhost:5173/ecommerce/'
 }
 }
 )
