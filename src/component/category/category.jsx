@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import Loader from '../loader/loader';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 
 
@@ -11,15 +11,16 @@ export default function Category(props) {
   const [isLoading, setLoading] = useState(true)
   const [product,setDetails] = useState([])
   function getRelatedCategory(){
-    axios.get(`https://ecommerce.routemisr.com/api/v1/products`)
+    axios.get(`https://ecommerce.routemisr.com/api/v1/categories`)
     .then(({data})=>{
       setLoading(false) 
       let allProducts = data.data;
-    let related = allProducts.filter((prod) =>{
-    return prod.category.name === category  
-      })  
+   let related = allProducts.filter((prod) =>{
+   return prod.category.name === category  
+       })  
     console.log(related);
-    setDetails(related)
+     setDetails(related)
+    
 
     }) 
     .catch(()=>{
@@ -58,6 +59,7 @@ return <div className='w-2/12 px-4 '>
 </div>
 
 </Link>
+
 
 </div>
 

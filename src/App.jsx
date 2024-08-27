@@ -17,7 +17,14 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import Checkout from './component/checkout/checkout';
 import Allorders from './component/allorders/allorders';
 import { Offline, Online } from 'react-detect-offline';
-import Wishlist from './component/wishlist/wishlist';
+import Wishlist from './component/Wishlist/Wishlist';
+import Category from './component/category/category';
+
+
+
+
+
+
 
 let query = new QueryClient()
 
@@ -27,12 +34,13 @@ let routes=createBrowserRouter([
 {index:true,element:<ProtectedRoute><Products/></ProtectedRoute>},
 {path:'login',element:<Login/>},
 {path:'Register',element:<Register/>},
+{path:'wishlist',element:<ProtectedRoute><Wishlist/></ProtectedRoute>},
 {path:'brands',element:<ProtectedRoute><Brands/></ProtectedRoute>},
-{path:'ProductDetails/:id/:category',element:<ProtectedRoute><Productdetails/></ProtectedRoute>},
+{path:'category',element:<ProtectedRoute><Category/></ProtectedRoute>},
+{path:'ProductDetails/:id/:Category',element:<ProtectedRoute><Productdetails/></ProtectedRoute>},
 {path:'cart',element:<ProtectedRoute><Carts/></ProtectedRoute>},
 {path:'allorders',element:<ProtectedRoute><Allorders/></ProtectedRoute>},
 {path:'checkout/:cartId',element:<ProtectedRoute><Checkout/></ProtectedRoute>},
-{path:'wishlist',element:<ProtectedRoute><Wishlist/></ProtectedRoute>},
 {path:'*',element:<Notfound/>},
 ]}
 ])

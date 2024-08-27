@@ -16,14 +16,10 @@ export default function Brands() {
 
 
   
-  function getproducts(){
+  async function getproducts(){
  
-    return axios.get('https://ecommerce.routemisr.com/api/v1/products')
-    .then(({data})=>{
-      return data
-     
-      // setProduct(data.data)
-    })
+    const { data } = await axios.get('https://ecommerce.routemisr.com/api/v1/brands');
+    return data;
       }
   return (
     <div>
