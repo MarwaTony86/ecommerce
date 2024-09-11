@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useContext, useEffect, useState } from 'react'
 import Loader from '../loader/loader'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom' 
 import CategorySlider from './../categorySlider/categorySlider'
 import  {cartContext}  from '../../context/cartContext'
 import toast from 'react-hot-toast'
@@ -23,8 +23,8 @@ let {data,error,isError,isLoading,isFetching}=useQuery({querykey:['recentproduct
 //console.log(data?.data);
 
 let {addProductToCart} = useContext(cartContext)
- // const [product,setProduct] = useState([])
-  //const [isLoading, setLoading] = useState(true)
+  const [product,setProduct] = useState([]) 
+//const [isLoading, setLoading] = useState(true)
 
 async function addProductItem(id){
   let response = await addProductToCart(id) 
@@ -44,13 +44,13 @@ async function addProductItem(id){
  
  
  
-  // setProduct(data.data)
+  getproducts(data.data)
 })
   }
-  // useEffect(()=>{
-  // getproducts() 
+   useEffect(()=>{
+   getproducts() 
 
-  // },[])
+   },[])
  
   if(isLoading){
     return (

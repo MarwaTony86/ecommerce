@@ -68,7 +68,6 @@ useEffect(()=>{
 </div>
 <button onClick={()=>{addProductItem(details?.id)}} className='btn '>Add To Cart</button>
      </div>
-    
    
 
      </div>

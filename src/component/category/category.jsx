@@ -11,7 +11,7 @@ export default function Category(props) {
   const [isLoading, setLoading] = useState(true)
   const [product,setDetails] = useState([])
   function getRelatedCategory(){
-    axios.get(`https://ecommerce.routemisr.com/api/v1/categories`)
+    axios.get(`https://ecommerce.routemisr.com/api/v1/products`)
     .then(({data})=>{
       setLoading(false) 
       let allProducts = data.data;
@@ -30,9 +30,7 @@ export default function Category(props) {
   }
   
 useEffect(()=>{
-  getRelatedCategory()
-
-
+  getRelatedCategory()  
 },[category])
 
  

@@ -19,7 +19,7 @@
 }
  .btn{
 
-    @apply rounded-lg text-white bg-green-600 px-4 py-2 w-full 
+    @apply rounded-lg text-white bg-green-600 px-4 py-2 w-1/12
  }
 
  .category-img{

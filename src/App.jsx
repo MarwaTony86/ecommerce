@@ -19,6 +19,10 @@ import Allorders from './component/allorders/allorders';
 import { Offline, Online } from 'react-detect-offline';
 import Wishlist from './component/Wishlist/Wishlist';
 import Category from './component/category/category';
+import ForgotPassword from './component/forgotPassword/forgotPassword';
+import ResetPassword from './component/resetPassword/resetPassword';
+
+
 
 
 
@@ -37,8 +41,10 @@ let routes=createBrowserRouter([
 {path:'wishlist',element:<ProtectedRoute><Wishlist/></ProtectedRoute>},
 {path:'brands',element:<ProtectedRoute><Brands/></ProtectedRoute>},
 {path:'category',element:<ProtectedRoute><Category/></ProtectedRoute>},
-{path:'ProductDetails/:id/:Category',element:<ProtectedRoute><Productdetails/></ProtectedRoute>},
+{path:'ProductDetails/:id/:category',element:<ProtectedRoute><Productdetails/></ProtectedRoute>},
 {path:'cart',element:<ProtectedRoute><Carts/></ProtectedRoute>},
+{path:'forgotPassword',element:<ForgotPassword/>},
+{path:'resetPassword',element:<ResetPassword/>},
 {path:'allorders',element:<ProtectedRoute><Allorders/></ProtectedRoute>},
 {path:'checkout/:cartId',element:<ProtectedRoute><Checkout/></ProtectedRoute>},
 {path:'*',element:<Notfound/>},
